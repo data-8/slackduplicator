@@ -1,5 +1,5 @@
 slacks:
   - domain: uc-jupyter
-    channel: bots-testing
+    channel: jupyterhub
   - domain: data8
-    channel: bots-testing
+    channel: jupyter
