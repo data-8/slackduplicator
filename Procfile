@@ -1,1 +1,1 @@
-worker: python3 ./duplicate.py
+cmd: python3 ./duplicate.py
