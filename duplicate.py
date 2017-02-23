@@ -80,7 +80,7 @@ class Channel:
 
 
 if __name__ == '__main__':
-    with open('config.yaml') as f:
+    with open(os.environ['CONFIG_PATH']) as f:
         config = yaml.safe_load(f)
 
 
