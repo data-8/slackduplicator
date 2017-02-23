@@ -1,5 +1,5 @@
 slacks:
   - domain: uc-jupyter
-    channel: jupyterhub
+    channel: datahub-support
   - domain: data8
     channel: jupyter
