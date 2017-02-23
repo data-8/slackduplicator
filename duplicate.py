@@ -85,8 +85,12 @@ if __name__ == '__main__':
 
 
     channels = [
-        Channel(slack['domain'], slack['channel'], os.environ[slack['domain'].replace('-', '_').upper() + '_TOKEN']
-    ) for slack in config['slacks']]
+        Channel(
+            slack['domain'],
+            slack['channel'],
+            os.environ[slack['domain'].replace('-', '_').upper() + '_TOKEN']
+        ) for slack in config['slacks']
+    ]
 
     while True:
         for c in channels:
