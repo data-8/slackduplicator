@@ -1,0 +1,5 @@
+slacks:
+  - domain: uc-jupyter
+    channel: bots-testing
+  - domain: data8
+    channel: bots-testing

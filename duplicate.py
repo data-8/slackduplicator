@@ -1,3 +1,4 @@
+import os
 import re
 import time
 from functools import lru_cache
@@ -83,7 +84,9 @@ if __name__ == '__main__':
         config = yaml.safe_load(f)
 
 
-    channels = [Channel(slack['domain'], slack['channel'], slack['token']) for slack in config['slacks']]
+    channels = [
+        Channel(slack['domain'], slack['channel'], os.environ[slack['domain'].replace('-', '_').upper() + '_TOKEN']
+    ) for slack in config['slacks']]
 
     while True:
         for c in channels:
