@@ -51,7 +51,6 @@ class Channel:
         Read unprocessed messages in channel and store them in message queue
         """
         response = self.client.rtm_read()
-        self.log.debug(action='events.fetched', count=len(response))
         new_messages = [
             m for m in response
             if m['type'] == 'message' and m['channel'] == self.id and 'user' in m
